@@ -1,7 +1,8 @@
 # How we work
 
-These rules apply to every repository in this organisation unless its own
-`CONTRIBUTING.md` says otherwise.
+These are shared defaults. Follow each repository’s applicable `AGENTS.md`,
+`CONTRIBUTING.md` and current approved task scope. Historical model-specific
+assignments and archived instructions do not grant current authority.
 
 ## The flow
 1. **Issue.** Every piece of work starts as one Issue (the *Task* template) on the
@@ -14,7 +15,8 @@ These rules apply to every repository in this organisation unless its own
 4. **Pull request.** One PR per Issue, "Closes #N" in the body, the template filled
    in. CI must pass.
 5. **Merge.** Squash only. The owner's word approves a merge. Docs, chore and test
-   PRs may auto-merge when CI is green.
+   PRs may auto-merge when CI is green and the current task authorises merging.
+   Passing checks alone does not authorise a merge, deployment or external write.
 6. **Deploy.** A merge to `main` deploys where the repository says so, then the
    deploy is read back. Each production deploy gets a GitHub Release with
    generated notes.
