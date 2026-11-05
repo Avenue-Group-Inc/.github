@@ -1,34 +1,5 @@
-# How we work
+# Avenue contributor entry
 
-These are shared defaults. Follow each repository’s applicable `AGENTS.md`,
-`CONTRIBUTING.md` and current approved task scope. Historical model-specific
-assignments and archived instructions do not grant current authority.
+All Avenue projects use the [single current operating policy](https://github.com/Avenue-Group-Inc/avenue-intake/blob/docs/avenue-governance/docs/governance/WORKFLOW.md), relevant project AGENTS and existing scoped task brief. This entry does not maintain another workflow. Superseded issue/PR/assistant procedures are recoverable in the archive.
 
-## The flow
-1. **Issue.** Every piece of work starts as one Issue (the *Task* template) on the
-   organisation's project board.
-2. **Branch.** `type/<issue>-<short-slug>`, where type is `feat`, `fix`, `chore` or
-   `docs`, e.g. `feat/259-media-release-rule`.
-3. **Commits and PR titles** follow [Conventional Commits](https://www.conventionalcommits.org):
-   `feat(media): …`, `fix(ops): …`, `docs: …`. Where a repository runs the `PR title`
-   check, a title that does not follow this fails it.
-4. **Pull request.** One PR per Issue, "Closes #N" in the body, the template filled
-   in. CI must pass.
-5. **Merge.** Squash only. The owner's word approves a merge. Docs, chore and test
-   PRs may auto-merge when CI is green and the current task authorises merging.
-   Passing checks alone does not authorise a merge, deployment or external write.
-6. **Deploy.** A merge to `main` deploys where the repository says so, then the
-   deploy is read back. Each production deploy gets a GitHub Release with
-   generated notes.
-
-## Always
-- No personal information about clients, owners or tenants in Issues, commits,
-  logs or test data. Use record IDs.
-- No passwords, keys or tokens anywhere in a repository.
-- Live data changes, messages to staff and anything that spends money need the
-  owner's yes first.
-- Never merge on red or pending CI. Never force-push `main`.
-- Canadian spelling.
-
-## Decisions
-Technical and design decisions are recorded as short ADRs in `docs/adr/`.
+Use Conventional Commits. Where a PR is appropriate, describe the problem, resulting behaviour, exact candidate, checks and material limits; follow actual repository protections and required CI. Passing checks alone does not authorise merging, deployment or live writes. Inspect automation before publication. Keep secrets and client/tenant personal information out of repositories and logs. Use Canadian spelling.
